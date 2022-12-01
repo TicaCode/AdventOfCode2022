@@ -14,7 +14,7 @@ class ReadFile:
         with open(self.doc_name) as f:
             self.input_lines = [line.rstrip() for line in f]
         if integer:
-            self.input_lines = [x.split(' ') for x in self.input_lines]
+            self.input_lines = [[int(y) for y in x.split(' ')] for x in self.input_lines]
         else:
             self.input_lines = [x.split(' ') for x in self.input_lines]
 
