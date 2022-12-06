@@ -3,7 +3,7 @@ from typing import List
 class ReadFile:
     input_lines: List
 
-    def __init__(self, doc_name: str, split_type: str, integer: bool) -> None:
+    def __init__(self, doc_name: str, split_type: str, integer: bool = False) -> None:
         self.doc_name = doc_name
         if split_type == 'blank_lines':
             self.split_on_blank_line(integer)
